@@ -129,7 +129,7 @@
 <h2 id="what"><a class="header-anchor" href="#what" aria-hidden="true">#</a> What?</h2>
 <p>Notifies your app when the user is idle.</p>
 <h2 id="why"><a class="header-anchor" href="#why" aria-hidden="true">#</a> Why?</h2>
-<p>When the user is idle you can do things like preload some code-split bundles, download images that haven't been scrolled to, etc.</p>
+<p>When the user is idle you can do things like preload some code-split bundles, download images that haven't been scrolled to, etc. Also useful to automatically log them out of a sensitive website.</p>
 <h2 id="installation"><a class="header-anchor" href="#installation" aria-hidden="true">#</a> Installation</h2>
 <pre><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> react-idle
 <span class="token comment" spellcheck="true"># or</span>
@@ -169,9 +169,9 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
   <span class="token punctuation">/></span></span>
 <span class="token punctuation">)</span><span class="token punctuation">,</span> DOM_NODE<span class="token punctuation">)</span>
 </code></pre>
-<div id="render-qccfpd9gcog" class="render-js"></div>
+<div id="render-h99hrs3m8q8" class="render-js"></div>
 <script type="text/babel">
-(function() { var DOM_NODE = document.getElementById("render-qccfpd9gcog");
+(function() { var DOM_NODE = document.getElementById("render-h99hrs3m8q8");
 // import { Idle } from 'react-idle'
 const { default: Idle } = ReactIdle
 
@@ -208,9 +208,9 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
   <span class="token punctuation">}</span></span><span class="token punctuation">/></span></span>
 <span class="token punctuation">)</span><span class="token punctuation">,</span> DOM_NODE<span class="token punctuation">)</span>
 </code></pre>
-<div id="render-iqcnpp43nag" class="render-js"></div>
+<div id="render-6hcp5112pjg" class="render-js"></div>
 <script type="text/babel">
-(function() { var DOM_NODE = document.getElementById("render-iqcnpp43nag");
+(function() { var DOM_NODE = document.getElementById("render-6hcp5112pjg");
 // import { Idle } from 'react-idle'
 const { default: Idle } = ReactIdle
 
@@ -246,9 +246,9 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
   <span class="token punctuation">/></span></span>
 <span class="token punctuation">)</span><span class="token punctuation">,</span> DOM_NODE<span class="token punctuation">)</span>
 </code></pre>
-<div id="render-m1ld3l95qvg" class="render-js"></div>
+<div id="render-7jpl5qgpjd8" class="render-js"></div>
 <script type="text/babel">
-(function() { var DOM_NODE = document.getElementById("render-m1ld3l95qvg");
+(function() { var DOM_NODE = document.getElementById("render-7jpl5qgpjd8");
 // import { Idle } from 'react-idle'
 const { default: Idle } = ReactIdle
 
@@ -281,7 +281,7 @@ ReactDOM.render((
   preloadCornify <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
     <span class="token keyword">const</span> script <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'script'</span><span class="token punctuation">)</span>
     script<span class="token punctuation">.</span>onload <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> cornifyLoaded<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
-    script<span class="token punctuation">.</span>src <span class="token operator">=</span> <span class="token string">'http://www.cornify.com/js/cornify.js'</span>
+    script<span class="token punctuation">.</span>src <span class="token operator">=</span> <span class="token string">'//www.cornify.com/js/cornify.js'</span>
     document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>script<span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 
@@ -293,7 +293,7 @@ ReactDOM.render((
     <span class="token keyword">return</span> <span class="token punctuation">(</span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
         <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>cornifyLoaded <span class="token operator">===</span> <span class="token boolean">false</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>
-          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Idle</span> <span class="token attr-name">timeout</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1000<span class="token punctuation">"</span></span> <span class="token attr-name">onChange</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">{</span> inactive<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Idle</span> <span class="token attr-name">onChange</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">{</span> inactive<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
             <span class="token keyword">if</span> <span class="token punctuation">(</span>inactive<span class="token punctuation">)</span> <span class="token punctuation">{</span>
               <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">preloadCornify</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
             <span class="token punctuation">}</span>
@@ -311,9 +311,9 @@ ReactDOM.render((
 
 ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>App</span><span class="token punctuation">/></span></span><span class="token punctuation">,</span> DOM_NODE<span class="token punctuation">)</span>
 </code></pre>
-<div id="render-5dne8bdv3lo" class="render-js"></div>
+<div id="render-uvpvu95093g" class="render-js"></div>
 <script type="text/babel">
-(function() { var DOM_NODE = document.getElementById("render-5dne8bdv3lo");
+(function() { var DOM_NODE = document.getElementById("render-uvpvu95093g");
 // import { Idle } from 'react-idle'
 const { default: Idle } = ReactIdle
 
@@ -325,7 +325,7 @@ class App extends React.Component {
   preloadCornify = () => {
     const script = document.createElement('script')
     script.onload = () => this.setState({ cornifyLoaded: true })
-    script.src = 'http://www.cornify.com/js/cornify.js'
+    script.src = '//www.cornify.com/js/cornify.js'
     document.body.appendChild(script)
   }
 
@@ -337,7 +337,7 @@ class App extends React.Component {
     return (
       <div>
         {this.state.cornifyLoaded === false && (
-          <Idle timeout="1000" onChange={({ inactive}) => {
+          <Idle onChange={({ inactive}) => {
             if (inactive) {
               this.preloadCornify()
             }

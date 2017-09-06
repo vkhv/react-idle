@@ -10,7 +10,7 @@ Notifies your app when the user is idle.
 Why?
 ----
 
-When the user is idle you can do things like preload some code-split bundles, download images that haven't been scrolled to, etc.
+When the user is idle you can do things like preload some code-split bundles, download images that haven't been scrolled to, etc. Also useful to automatically log them out of a sensitive website.
 
 Installation
 ------------
@@ -131,7 +131,7 @@ class App extends React.Component {
   preloadCornify = () => {
     const script = document.createElement('script')
     script.onload = () => this.setState({ cornifyLoaded: true })
-    script.src = 'http://www.cornify.com/js/cornify.js'
+    script.src = '//www.cornify.com/js/cornify.js'
     document.body.appendChild(script)
   }
 
@@ -143,7 +143,7 @@ class App extends React.Component {
     return (
       <div>
         {this.state.cornifyLoaded === false && (
-          <Idle timeout="1000" onChange={({ inactive}) => {
+          <Idle onChange={({ inactive}) => {
             if (inactive) {
               this.preloadCornify()
             }
