@@ -9,7 +9,7 @@ export default class Idle extends Component {
   }
 
   state = {
-    inactive: true
+    idle: true
   }
 
   timeout = null
@@ -26,13 +26,13 @@ export default class Idle extends Component {
     })
   }
 
-  handleChange(inactive) {
-    this.props.onChange({ inactive })
-    this.setState({ inactive })
+  handleChange(idle) {
+    this.props.onChange({ idle })
+    this.setState({ idle })
   }
 
   handleEvent = () => {
-    if (this.state.inactive) {
+    if (this.state.idle) {
       this.handleChange(false)
     }
     clearTimeout(this.timeout)

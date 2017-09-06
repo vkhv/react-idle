@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>React Idle</title>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/prismjs@1.6.0/themes/prism-tomorrow.css"/>
     <style>
@@ -157,10 +159,10 @@ yarn add react-idle
 
 ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">(</span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Idle</span>
-    <span class="token attr-name">onChange</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">{</span> inactive <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">{</span> inactive <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span>
-    <span class="token attr-name">render</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">{</span> inactive <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span>
+    <span class="token attr-name">onChange</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">{</span> idle <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">{</span> idle <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span>
+    <span class="token attr-name">render</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">{</span> idle <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>
-        <span class="token punctuation">{</span>inactive
+        <span class="token punctuation">{</span>idle
           <span class="token operator">?</span> <span class="token string">"You are idle."</span>
           <span class="token punctuation">:</span> <span class="token string">"Stop doing stuff for 1 second."</span>
         <span class="token punctuation">}</span>
@@ -169,18 +171,18 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
   <span class="token punctuation">/></span></span>
 <span class="token punctuation">)</span><span class="token punctuation">,</span> DOM_NODE<span class="token punctuation">)</span>
 </code></pre>
-<div id="render-h99hrs3m8q8" class="render-js"></div>
+<div id="render-1ec9a5iivhg" class="render-js"></div>
 <script type="text/babel">
-(function() { var DOM_NODE = document.getElementById("render-h99hrs3m8q8");
+(function() { var DOM_NODE = document.getElementById("render-1ec9a5iivhg");
 // import { Idle } from 'react-idle'
 const { default: Idle } = ReactIdle
 
 ReactDOM.render((
   <Idle
-    onChange={({ inactive }) => console.log({ inactive })}
-    render={({ inactive }) =>
+    onChange={({ idle }) => console.log({ idle })}
+    render={({ idle }) =>
       <h1>
-        {inactive
+        {idle
           ? "You are idle."
           : "Stop doing stuff for 1 second."
         }
@@ -198,9 +200,9 @@ ReactDOM.render((
 <span class="token keyword">const</span> <span class="token punctuation">{</span> <span class="token keyword">default</span><span class="token punctuation">:</span> Idle <span class="token punctuation">}</span> <span class="token operator">=</span> ReactIdle
 
 ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">(</span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Idle</span> <span class="token attr-name">render</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">{</span> inactive <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Idle</span> <span class="token attr-name">render</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">{</span> idle <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>
-      <span class="token punctuation">{</span>inactive
+      <span class="token punctuation">{</span>idle
         <span class="token operator">?</span> <span class="token string">"*whistles*"</span>
         <span class="token punctuation">:</span> <span class="token string">"Woah what now?"</span>
       <span class="token punctuation">}</span>
@@ -208,16 +210,16 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
   <span class="token punctuation">}</span></span><span class="token punctuation">/></span></span>
 <span class="token punctuation">)</span><span class="token punctuation">,</span> DOM_NODE<span class="token punctuation">)</span>
 </code></pre>
-<div id="render-6hcp5112pjg" class="render-js"></div>
+<div id="render-f8oed2073u8" class="render-js"></div>
 <script type="text/babel">
-(function() { var DOM_NODE = document.getElementById("render-6hcp5112pjg");
+(function() { var DOM_NODE = document.getElementById("render-f8oed2073u8");
 // import { Idle } from 'react-idle'
 const { default: Idle } = ReactIdle
 
 ReactDOM.render((
-  <Idle render={({ inactive }) =>
+  <Idle render={({ idle }) =>
     <h1>
-      {inactive
+      {idle
         ? "*whistles*"
         : "Woah what now?"
       }
@@ -228,16 +230,16 @@ ReactDOM.render((
 })()</script>
 
 <h3 id="timeout"><a class="header-anchor" href="#timeout" aria-hidden="true">#</a> <code>timeout</code></h3>
-<p>How long before notifying that the user is inactive in milliseconds.</p>
+<p>How long before notifying that the user is idle in milliseconds.</p>
 <pre class="render-js-code"><code class="jsx"><span class="token comment" spellcheck="true">// import { Idle } from 'react-idle'</span>
 <span class="token keyword">const</span> <span class="token punctuation">{</span> <span class="token keyword">default</span><span class="token punctuation">:</span> Idle <span class="token punctuation">}</span> <span class="token operator">=</span> ReactIdle
 
 ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">(</span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Idle</span>
     <span class="token attr-name">timeout</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token number">2000</span><span class="token punctuation">}</span></span>
-    <span class="token attr-name">render</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">{</span> inactive <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span>
+    <span class="token attr-name">render</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">{</span> idle <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>
-        <span class="token punctuation">{</span>inactive
+        <span class="token punctuation">{</span>idle
           <span class="token operator">?</span> <span class="token string">"You are idle."</span>
           <span class="token punctuation">:</span> <span class="token string">"Stop doing stuff for 2 seconds."</span>
         <span class="token punctuation">}</span>
@@ -246,18 +248,18 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">ren
   <span class="token punctuation">/></span></span>
 <span class="token punctuation">)</span><span class="token punctuation">,</span> DOM_NODE<span class="token punctuation">)</span>
 </code></pre>
-<div id="render-7jpl5qgpjd8" class="render-js"></div>
+<div id="render-fqvarnhq218" class="render-js"></div>
 <script type="text/babel">
-(function() { var DOM_NODE = document.getElementById("render-7jpl5qgpjd8");
+(function() { var DOM_NODE = document.getElementById("render-fqvarnhq218");
 // import { Idle } from 'react-idle'
 const { default: Idle } = ReactIdle
 
 ReactDOM.render((
   <Idle
     timeout={2000}
-    render={({ inactive }) =>
+    render={({ idle }) =>
       <h1>
-        {inactive
+        {idle
           ? "You are idle."
           : "Stop doing stuff for 2 seconds."
         }
@@ -293,8 +295,8 @@ ReactDOM.render((
     <span class="token keyword">return</span> <span class="token punctuation">(</span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
         <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>cornifyLoaded <span class="token operator">===</span> <span class="token boolean">false</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>
-          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Idle</span> <span class="token attr-name">onChange</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">{</span> inactive<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span>inactive<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Idle</span> <span class="token attr-name">onChange</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">{</span> idle<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>idle<span class="token punctuation">)</span> <span class="token punctuation">{</span>
               <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">preloadCornify</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
             <span class="token punctuation">}</span>
           <span class="token punctuation">}</span></span><span class="token attr-name">}</span><span class="token punctuation">/></span></span>
@@ -311,9 +313,9 @@ ReactDOM.render((
 
 ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>App</span><span class="token punctuation">/></span></span><span class="token punctuation">,</span> DOM_NODE<span class="token punctuation">)</span>
 </code></pre>
-<div id="render-uvpvu95093g" class="render-js"></div>
+<div id="render-b5tbqmohab8" class="render-js"></div>
 <script type="text/babel">
-(function() { var DOM_NODE = document.getElementById("render-uvpvu95093g");
+(function() { var DOM_NODE = document.getElementById("render-b5tbqmohab8");
 // import { Idle } from 'react-idle'
 const { default: Idle } = ReactIdle
 
@@ -337,8 +339,8 @@ class App extends React.Component {
     return (
       <div>
         {this.state.cornifyLoaded === false && (
-          <Idle onChange={({ inactive}) => {
-            if (inactive) {
+          <Idle onChange={({ idle}) => {
+            if (idle) {
               this.preloadCornify()
             }
           }}/>

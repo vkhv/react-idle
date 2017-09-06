@@ -56,10 +56,10 @@ const { default: Idle } = ReactIdle
 
 ReactDOM.render((
   <Idle
-    onChange={({ inactive }) => console.log({ inactive })}
-    render={({ inactive }) =>
+    onChange={({ idle }) => console.log({ idle })}
+    render={({ idle }) =>
       <h1>
-        {inactive
+        {idle
           ? "You are idle."
           : "Stop doing stuff for 1 second."
         }
@@ -81,9 +81,9 @@ Whatever you'd like to render in response to changes in user activity.
 const { default: Idle } = ReactIdle
 
 ReactDOM.render((
-  <Idle render={({ inactive }) =>
+  <Idle render={({ idle }) =>
     <h1>
-      {inactive
+      {idle
         ? "*whistles*"
         : "Woah what now?"
       }
@@ -94,7 +94,7 @@ ReactDOM.render((
 
 ### `timeout`
 
-How long before notifying that the user is inactive in milliseconds.
+How long before notifying that the user is idle in milliseconds.
 
 ```render-babel
 // import { Idle } from 'react-idle'
@@ -103,9 +103,9 @@ const { default: Idle } = ReactIdle
 ReactDOM.render((
   <Idle
     timeout={2000}
-    render={({ inactive }) =>
+    render={({ idle }) =>
       <h1>
-        {inactive
+        {idle
           ? "You are idle."
           : "Stop doing stuff for 2 seconds."
         }
@@ -143,8 +143,8 @@ class App extends React.Component {
     return (
       <div>
         {this.state.cornifyLoaded === false && (
-          <Idle onChange={({ inactive}) => {
-            if (inactive) {
+          <Idle onChange={({ idle}) => {
+            if (idle) {
               this.preloadCornify()
             }
           }}/>
