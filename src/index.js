@@ -1,5 +1,8 @@
 import { Component } from "react"
 
+const eventsChanged = (yeoldevents, yonnewevents) =>
+  yeoldevents.sort().toString() !== yonnewevents.sort().toString()
+
 export default class Idle extends Component {
   static defaultProps = {
     render: () => null,
@@ -15,12 +18,28 @@ export default class Idle extends Component {
   timeout = null
 
   componentDidMount() {
+    this.attachEvents()
+    this.setTimeout()
+  }
+
+  componentWillUnmount() {
+    this.removeEvents()
+  }
+
+  componentDidUpdate(prevProps) {
+    if (eventsChanged(prevProps.events, this.props.events)) {
+      this.removeEvents()
+      this.attachEvents()
+    }
+  }
+
+  attachEvents() {
     this.props.events.forEach(event => {
       window.addEventListener(event, this.handleEvent)
     })
   }
 
-  componentWillUnmount() {
+  removeEvents() {
     this.props.events.forEach(event => {
       window.removeEventListener(event, this.handleEvent)
     })
@@ -36,6 +55,10 @@ export default class Idle extends Component {
       this.handleChange(false)
     }
     clearTimeout(this.timeout)
+    this.setTimeout()
+  }
+
+  setTimeout() {
     this.timeout = setTimeout(() => {
       this.handleChange(true)
     }, this.props.timeout)
