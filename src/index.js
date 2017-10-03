@@ -35,7 +35,7 @@ export default class Idle extends Component {
 
   attachEvents() {
     this.props.events.forEach(event => {
-      window.addEventListener(event, this.handleEvent)
+      window.addEventListener(event, this.handleEvent, true)
     })
   }
 
