@@ -5,6 +5,7 @@ const eventsChanged = (yeoldevents, yonnewevents) =>
 
 export default class Idle extends Component {
   static defaultProps = {
+    defaultIdle: false,
     render: () => null,
     onChange: () => {},
     timeout: 1000,
@@ -12,7 +13,7 @@ export default class Idle extends Component {
   }
 
   state = {
-    idle: true
+    idle: this.props.defaultIdle
   }
 
   timeout = null

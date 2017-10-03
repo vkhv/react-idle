@@ -167,6 +167,11 @@ ReactDOM.render(<App/>, DOM_NODE)
 The window events to listen for activity, defaults to `[ "mousemove", "mousedown", "keydown", "touchstart", "scroll" ]`.
 
 
+### `defaultIdle`
+
+You can start out as idle by passing `<Idle defaultIdle={true}/>`, by default it is false--assumes that loading the page initially is a user interation.
+
+
 Legal
 -----
 
