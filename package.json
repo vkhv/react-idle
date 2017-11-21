@@ -4,6 +4,7 @@
   "description": "Notifies your app when the user is idle.",
   "main": "lib/index.js",
   "module": "es/index.js",
+  "types": "lib/index.d.ts"
   "files": [
     "css",
     "es",
