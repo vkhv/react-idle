@@ -1,6 +1,6 @@
 declare module 'react-idle' {
 	interface idleFunction extends Function {
-		(idle: {idle: boolean}): any;
+		(idle: {idle: boolean}): JSX.Element[] | null | boolean | string;
 	}
 	type Props = {
 		render?: idleFunction;
