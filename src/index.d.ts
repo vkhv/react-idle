@@ -2,7 +2,7 @@ declare module 'react-idle' {
 	export type IdleData = {idle: boolean};
 
 	interface idleFunction extends Function {
-		(idle: IdleData): JSX.Element[] | null | boolean | string | void;
+		(idle: IdleData): JSX.Element | JSX.Element[] | null | boolean | string | void;
 	}
 
 	type Props = {
